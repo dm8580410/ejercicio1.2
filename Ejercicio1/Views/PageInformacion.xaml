@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1.Viows.PageInformacion">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtnombre" 
+                   Placeholder="Nombres" 
+                   Keyboard="Text"
+                   Margin =" 10,10,10,0" />
+
+            <Entry x:Name="txtapellidos" Placeholder="Apellidos" Keyboard="Text" 
+                   Margin =" 10,10,10,0"/>
+
+            <Picker Title="Seleccione Edad" Margin =" 10,10,10,0" x:Name="cbEdad">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>10-15</x:String>
+                        <x:String>18-25</x:String>
+                        <x:String>38-55</x:String>
+                        <x:String>60-75</x:String>
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry x:Name="txtcorreo" Placeholder="Correo Electronico" Keyboard="Text"
+                   Margin =" 10,10,10,0"/>
+
+            <Button x:Name="btninformacion"  Text="Enviar Informacion" Clicked="btninformacion_Clicked"
+                    Margin =" 10,10,10,0"
+                    BackgroundColor = "Violet"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
